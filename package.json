@@ -18,5 +18,8 @@
     "title": "res-min",
     "width": 400,
     "height": 300
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
   }
 }
