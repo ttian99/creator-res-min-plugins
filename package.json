@@ -1,0 +1,22 @@
+{
+  "name": "res-min",
+  "version": "0.0.1",
+  "description": "The package template for getting started.",
+  "author": "Monkey Jiao",
+  "main": "main.js",
+  "main-menu": {
+    "i18n:MAIN_MENU.package.title/res-min/open": {
+      "message": "res-min:open"
+    },
+    "i18n:MAIN_MENU.package.title/res-min/hello": {
+      "message": "res-min:say-hello"
+    }
+  },
+  "panel": {
+    "main": "panel/index.js",
+    "type": "dockable",
+    "title": "res-min",
+    "width": 400,
+    "height": 300
+  }
+}
