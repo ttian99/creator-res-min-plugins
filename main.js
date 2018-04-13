@@ -19,10 +19,12 @@ module.exports = {
       // open entry panel registered in package.json
       Editor.Panel.open('res-min');
     },
-    'say-hello'() {
+    'res-min'() {
       Editor.log('Hello World!');
       // send ipc message to panel
-      Editor.Ipc.sendToPanel('res-min', 'res-min:hello');
+      // Editor.Ipc.sendToPanel('res-min', 'res-min:hello');
+      Editor.log('res-min!');
+      gulpTools();
     },
     'clicked'() {
       Editor.log('Button clicked!');
