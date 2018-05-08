@@ -19,6 +19,10 @@ module.exports = {
     'open'() {
       Editor.Panel.open('res-min');
     },
+    'install'() {
+      Editor.info('安装res-min插件的第三方依赖包');
+      task.install();
+    },
     'qqplay'() {
       Editor.log('qqplay!');
     },
@@ -50,6 +54,7 @@ module.exports = {
     // 编译完成的消息
     'editor:build-finished'(event, arg) {
       Editor.log('editor:build-finished');
+	    var fileUrl = Editor.url('packages://res-min/config/config.json');
       fs.readJson(fileUrl, (err, json) => {
         if (err) return Editor.error(err);
         Editor.info('get json success');

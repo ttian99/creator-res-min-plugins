@@ -5,11 +5,11 @@
   "author": "Monkey Jiao",
   "main": "main.js",
   "main-menu": {
-    "res-min/open": {
+    "res-min/打开配置面板": {
       "message": "res-min:open"
     },
-    "res-min/qqplay": {
-      "message": "res-min:qqplay"
+    "res-min/安装依赖": {
+      "message": "res-min:install"
     }
   },
   "panel": {
@@ -21,6 +21,12 @@
   },
   "dependencies": {
     "fs-extra": "^5.0.0",
-    "gulp": "^3.9.1"
-  }
+    "gulp": "^3.9.1",
+    "gulp-cache": "^1.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-zip": "^4.1.0",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^5.1.0"
+  },
+  "private": true
 }
