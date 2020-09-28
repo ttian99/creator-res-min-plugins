@@ -17,3 +17,6 @@ cocos-creator自动压缩图片资源插件, 项目构建完成后，自动去�
 ## 4.下载和建议地址
 - 插件地址： https://github.com/ttian99/creator-res-min-plugins
 - issues地址：https://github.com/ttian99/creator-res-min-plugins/issues
+
+## 问题
+- 插件不断重启问题原因：1.使用了不规范的路径 2.fs、path等内置模块冲突改用大写Fs、Path

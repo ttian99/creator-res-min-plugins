@@ -1,0 +1,36 @@
+<h2>自动压缩资源配置</h2>
+<ui-box-container class="layout vertical">
+    <div>
+        <ui-prop name="自动压缩" tooltip="勾选后启用自动压缩资源" v-value="enable" class="{{enable ? 'green' : 'grey'}}">
+            <ui-checkbox type="boolean" v-value="enable"></ui-checkbox>
+            <p v-readonly="true" v-value="enable">{{enable ? '已启用' : '未启用'}}</p>
+        </ui-prop>
+        <hr />
+        <ui-prop name="jpg图像质量（%）" type="number" v-value="jpgQuality" tooltip="jpg的图像质量" slidable="true"></ui-prop>
+        <ui-prop name="png图像最低质量（%）" type="number" v-value="pngMinQuality" tooltip="png最低图像质量"></ui-prop>
+        <ui-prop name="png图像最高质量（%）" type="number" v-value="pngMaxQuality" tooltip="png最高图像质量"></ui-prop>
+        <ui-prop name="启用缓存" type="boolean" v-value="enableCache" tooltip="启用缓存"></ui-prop>
+    </div>
+    <hr />
+    <ui-button class="button blue big" v-disabled="isSaving" @click="onClickSaveConfig()">保存</ui-button>
+</ui-box-container>
+<br />
+<h2>手动压缩</h2>
+<ui-box-container class="layout vertical">
+    <div>
+        <ui-prop name="目标路径" tooltip="选择目标路径">
+            <ui-input class="dirPath" disabled type="string" v-value="srcPath" style></ui-input>
+            <ui-button icon @click="onClickSrcPath()">打开</ui-button>
+        </ui-prop>
+        <ui-prop name="输出路径" tooltip="选择输出路径">
+            <ui-input class="dirPath" disabled type="string" v-value="dstPath" width="200px"></ui-input>
+            <ui-button icon @click="onClickDstPath()">打开</ui-button>
+        </ui-prop>
+        <ui-prop class="red" name="注意">
+
+        </ui-prop>
+    </div>
+    <hr />
+    <ui-button class="button green big" v-disabled="isSaving" @click="saveConfig()">压缩</ui-button>
+</ui-box-container>
+<hr />
